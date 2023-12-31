@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prepare": "husky install",
     "preinstall": "npx only-allow pnpm",
     "lint": "pnpm dlx @biomejs/biome check --apply src/",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,6 +14,10 @@
   "license": "MIT",
   "devDependencies": {
     "@biomejs/biome": "1.4.1",
+    "husky": "^8.0.0",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "lint-staged": "^15.2.0"
   }
 }
