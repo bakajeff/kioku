@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
+    "lint": "pnpm dlx @biomejs/biome check --apply src/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
