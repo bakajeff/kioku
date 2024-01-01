@@ -7,7 +7,7 @@
     "prepare": "husky install",
     "preinstall": "npx only-allow pnpm",
     "lint": "pnpm dlx @biomejs/biome check --apply",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest",
     "commitlint": "commitlint --edit"
   },
   "keywords": [],
@@ -19,6 +19,7 @@
     "@commitlint/config-conventional": "^18.4.3",
     "husky": "^8.0.0",
     "lint-staged": "^15.2.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vitest": "^1.1.1"
   }
 }
