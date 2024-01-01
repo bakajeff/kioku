@@ -6,8 +6,10 @@
   "scripts": {
     "prepare": "husky install",
     "preinstall": "npx only-allow pnpm",
-    "lint": "pnpm dlx @biomejs/biome check --apply",
+    "lint": "pnpm dlx @biomejs/biome check --apply src/",
     "test": "vitest",
+    "ci:test": "vitest related --run",
+    "ci:lint": "pnpm dlx @biomejs/biome check --apply",
     "commitlint": "commitlint --edit"
   },
   "keywords": [],
