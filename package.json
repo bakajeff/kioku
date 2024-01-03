@@ -10,6 +10,7 @@
     "test": "vitest",
     "ci:test": "vitest related --run",
     "ci:lint": "pnpm dlx @biomejs/biome check --apply",
+    "ci:typecheck": "pnpm tsc --noEmit --skipLibCheck",
     "commitlint": "commitlint --edit"
   },
   "keywords": [],
