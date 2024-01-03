@@ -1,13 +1,17 @@
 import { beforeEach, describe, expect, it } from "vitest";
 
-import { Card } from "./card";
+import { Card, CardProps } from "./card";
 
 describe("Card", () => {
-	it("should create a card with an id", () => {
-		const sut = new Card({
+	let sut: Card;
+
+	beforeEach(() => {
+		sut = new Card({
 			repetitions: [],
 		});
+	});
 
+	it("should create a card with an id", () => {
 		expect(sut.id).toBeTruthy();
 	});
 
@@ -25,10 +29,6 @@ describe("Card", () => {
 	});
 
 	it("should return zero if there are no repetitions", () => {
-		const sut = new Card({
-			repetitions: [],
-		});
-
 		expect(sut.repetitions).toBe(0);
 	});
 });
