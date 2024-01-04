@@ -8,6 +8,8 @@ describe("Card", () => {
 	beforeEach(() => {
 		sut = new Card({
 			repetitions: [],
+			easiness: 1,
+			daysUntilNextReview: 2,
 		});
 	});
 
@@ -21,6 +23,8 @@ describe("Card", () => {
 		const sut = new Card(
 			{
 				repetitions: [],
+				easiness: 1,
+				daysUntilNextReview: 2,
 			},
 			id,
 		);
