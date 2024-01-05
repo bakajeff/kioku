@@ -10,6 +10,7 @@
     "test": "vitest",
     "ci:test": "vitest related --run",
     "ci:lint": "pnpm dlx @biomejs/biome check --apply",
+    "ci:typecheck": "pnpm tsc --noEmit --skipLibCheck",
     "commitlint": "commitlint --edit"
   },
   "keywords": [],
@@ -19,6 +20,7 @@
     "@biomejs/biome": "1.4.1",
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
+    "@types/node": "^20.10.6",
     "husky": "^8.0.0",
     "lint-staged": "^15.2.0",
     "typescript": "^5.3.3",

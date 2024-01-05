@@ -1,4 +1,4 @@
 {
-	"*.ts": ["pnpm run ci:lint", "pnpm run ci:test"],
+	"*.ts": ["pnpm run ci:lint", "pnpm run ci:test", "pnpm run ci:typecheck"],
 	"*.json": ["pnpm run ci:lint"]
 }
