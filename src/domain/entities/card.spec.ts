@@ -1,13 +1,13 @@
 import { beforeEach, describe, expect, it } from "vitest";
 
-import { Card, CardProps } from "./card";
+import { Card } from "./card";
 
 describe("Card", () => {
 	let sut: Card;
 
 	beforeEach(() => {
 		sut = new Card({
-			repetitions: [],
+			repetitions: 0,
 			easiness: 1,
 			daysUntilNextReview: 2,
 		});
@@ -22,7 +22,7 @@ describe("Card", () => {
 
 		const sut = new Card(
 			{
-				repetitions: [],
+				repetitions: 0,
 				easiness: 1,
 				daysUntilNextReview: 2,
 			},

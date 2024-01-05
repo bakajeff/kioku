@@ -1,7 +1,7 @@
 import { randomUUID } from "node:crypto";
 
 export interface CardProps {
-	repetitions: Date[];
+	repetitions: number;
 	easiness: number;
 	daysUntilNextReview: number;
 }
@@ -20,7 +20,11 @@ export class Card {
 	}
 
 	public get repetitions() {
-		return this.props.repetitions.length;
+		return this.props.repetitions;
+	}
+
+	public set repetitions(value: number) {
+		this.props.repetitions = value;
 	}
 
 	public get easiness(): number {
