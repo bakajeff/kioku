@@ -1,3 +1,8 @@
+interface ReviewCardUseCaseProps {
+	cardId: string;
+	answer: number;
+}
+
 export interface ReviewCardUseCase {
-	execute(cardId: string, answer: number): Promise<void>;
+	execute(params: ReviewCardUseCaseProps): Promise<void>;
 }
