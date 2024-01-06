@@ -47,4 +47,17 @@ describe("Review Card Controller", () => {
 
 		expect(response.statusCode).toBe(400);
 	});
+
+	it("should return 500 if ReviewCardUseCase throws", async () => {
+		const reviewCardUseCase = new ReviewCardUseCaseSpy();
+		vi.spyOn(reviewCardUseCase, "execute").mockRejectedValue(Error());
+		const sut = new ReviewCardController(reviewCardUseCase);
+
+		const response = await sut.handle({
+			cardId: "any id",
+			answer: 0,
+		});
+
+		expect(response.statusCode).toBe(500);
+	});
 });
