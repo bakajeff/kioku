@@ -1,10 +1,10 @@
-import { ReviewCardUseCase } from "../../domain/interfaces/use-cases/review-card-use-case";
+import { ReviewCard } from "../../domain/use-cases/review-card-use-case";
 import { badRequest, noContent, serverError } from "../helpers/http-helper";
 import { Controller } from "../interfaces/controller";
 import { HttpResponse } from "../interfaces/http-response";
 
 export class ReviewCardController implements Controller {
-	constructor(private readonly reviewCardUseCase: ReviewCardUseCase) {}
+	constructor(private readonly reviewCardUseCase: ReviewCard) {}
 
 	async handle({
 		cardId,
