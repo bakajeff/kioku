@@ -1,5 +1,5 @@
 import { ReviewCardUseCase } from "../../domain/interfaces/use-cases/review-card-use-case";
-import { badRequest, ok, serverError } from "../helpers/http-helper";
+import { badRequest, noContent, serverError } from "../helpers/http-helper";
 import { Controller } from "../interfaces/controller";
 import { HttpResponse } from "../interfaces/http-response";
 
@@ -20,7 +20,7 @@ export class ReviewCardController implements Controller {
 				answer,
 			});
 
-			return ok({});
+			return noContent();
 		} catch (error) {
 			return serverError(error);
 		}

@@ -60,4 +60,17 @@ describe("Review Card Controller", () => {
 
 		expect(response.statusCode).toBe(500);
 	});
+
+	it("should return 204 on success", async () => {
+		const reviewCardUseCase = new ReviewCardUseCaseSpy();
+		const reviewCardUseCaseSpy = vi.spyOn(reviewCardUseCase, "execute");
+		const sut = new ReviewCardController(reviewCardUseCase);
+
+		const response = await sut.handle({
+			cardId: "fc066086-069f-48cf-be1c-efd5ea8cfa3e",
+			answer: 5,
+		});
+
+		expect(response.statusCode).toBe(204);
+	});
 });
